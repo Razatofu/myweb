@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Home - My Website</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Your existing styles are here (copied as-is) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #0077cc;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #0077cc;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    form input, form textarea {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #005fa3;
+    }
+
+    /* 💡 New card styles */
+    .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+    .card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  transition: transform 0.3s;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 380px;
+}
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* or 'cover' */
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+    .card p {
+      margin-bottom: 10px;
+      color: #555;
+    }
+    #Login{
+      float: right;
+    }
+
+      footer {
+      background-color: #2b08f1;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: aqua;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="feedback.html">Feedback</a>
+    <span id="Login"><a href="login.html">LOGIN</a></span>
+  </nav>
+
+  <div class="container">
+    <h1>HABIB ULLAH Group of Companies</h1>
+    <p>The Companies run and operated by the family of Habib ullah Hussain</p>
+
+    <!-- ✅ 3 Cards Section -->
+    <div class="card-container">
+      <div class="card">
+        <img src="hgfarm.jpg" alt="Card 1">
+        <p>Habib Goat farm</p>
+        <p>qurbani, sadqa,aqiqa and for events</p>
+        <p>Goat available</p>
+      </div>
+      <div class="card">
+        <img src="abeer.jpg" alt="Card 2">
+        <p>ABEER fragrance collection</p>
+        <p>long lasting Research Fragrances</p>
+        <p>male, female and unisex fragrances available</p>
+        <a href="https://razatofu.github.io/abeer/">https://razatofu.github.io/abeer/</a>
+      </div>
+      <div class="card">
+        <img src="LOGOCLUB1.jpg" alt="Card 3">
+        <p>Sun Shine Trackers Adventure Club of Pakistan</p>
+        <p>A adventure club for adventure lovers</p>
+        <p>Complete Travel and Toursim solution for you</p>
+      </div>
+    </div>
+  </div>
+   <footer>
+    <p>Follow us on social media</p>
+    <div class="social-icons">
+      <a href="https://wa.me/your-number" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/yourchannel" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@yourprofile" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <p>a registerd trademark. all right reserved.  </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+

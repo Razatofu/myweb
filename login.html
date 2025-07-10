@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Register</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+      text-align: center;
+    }
+    h2 {
+      color: #0077cc;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    .message {
+      margin-top: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <input type="email" id="regEmail" placeholder="Enter Email" required>
+    <input type="password" id="regPassword" placeholder="Enter Password" required>
+    <button onclick="register()">Register</button>
+    <p id="regMsg" class="message"></p>
+  </div>
+
+  <div class="form-container">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Enter Email" required>
+    <input type="password" id="loginPassword" placeholder="Enter Password" required>
+    <button onclick="login()">Login</button>
+    <p id="loginMsg" class="message"></p>
+  </div>
+
+  <script>
+    // Register Function
+    function register() {
+      let email = document.getElementById("regEmail").value.trim();
+      let password = document.getElementById("regPassword").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Check if email already exists
+      let exists = users.find(user => user.email === email);
+
+      if (exists) {
+        document.getElementById("regMsg").innerText = "❌ Email already registered.";
+        return;
+      }
+
+      // Add new user
+      users.push({ email: email, password: password });
+      localStorage.setItem("users", JSON.stringify(users));
+      document.getElementById("regMsg").innerText = "✅ Registered successfully!";
+    }
+
+    // Login Function
+    function login() {
+      let email = document.getElementById("loginEmail").value.trim();
+      let password = document.getElementById("loginPassword").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      let validUser = users.find(user => user.email === email && user.password === password);
+
+      if (validUser) {
+        document.getElementById("loginMsg").innerText = "✅ Login successful!";
+      } else {
+        document.getElementById("loginMsg").innerText = "❌ Invalid email or password.";
+      }
+    }
+  </script>
+
+</body>
+</html>
